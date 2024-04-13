@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/*navbar css*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+
+.nav-links {
+    display: flex;
+    column-gap: 5px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: #09214F;
+}
+
+.nav-link a:hover {
+    text-decoration: underline;
+}
+
+.nav-bar-toggle {
+    display: none;
+}
+
+#signInBtn {
+    background: none;
+    border: none;
+    font-family: poppins;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#signInBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#sidesignInBtn {
+    background: none;
+    border: none;
+    font-family: poppins;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
+
+#sidesignInBtn:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*side navbar css*/
+.side-navbar {
+    width: 40%;
+    height: 100%;
+    background-color: #09214F;
+    position: fixed;
+    left: -50%;
+    padding: 20px;
+    transition: 1s;
+    color: white;
+    border-radius: 4px;
+    z-index: 200;
+
+}
+
+.side-nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.side-nav-links {
+    row-gap: 30px;
+
+}
+
+.side-nav-links a:hover {
+    text-decoration: underline;
+}
+
+/*header css*/
+.slider {
+
+    margin-top: 8vh;
+    position: relative;
+}
+
+.slider .list .item {
+    position: absolute;
+    left: 15vw;
+    right: 15vw;
+    height: 70vh;
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.slider .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider .list .item::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to top, #000 10%, transparent);
+}
+
+.slider .list .item .content {
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    bottom: 15%;
+    width: 100%;
+    max-width: 80%;
+    color: white;
+}
+
+.title {
+    font-size: 1.2em;
+}
+
+.des {
+    margin-top: 5px;
+    font-size: 0.8em;
+}
+
+.slider .list .item.active {
+    opacity: 1;
+    z-index: 50;
+}
+
+.slider .list .item .content .button {
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+.slider .list .item .content .button button {
+    border: none;
+    background-color: #09214F;
+    letter-spacing: 3px;
+    font-family: poppins;
+    font-weight: 500;
+    color: white;
+}
+
+.slider .list .item .content .button button:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+    border: 1px solid #eee;
+
+}
+
+.slider .list .item .content .button button:nth-child(1):hover {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #eee;
+    transform: scale(1.1);
+}
+
+.slider .list .item .content .button button:nth-child(2):hover {
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+.slider .list .item.active .title,
+.slider .list .item.active .year,
+.slider .list .item.active .genre,
+.slider .list .item.active .des,
+.slider .list .item.active .button {
+    transform: translateY(30px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s .7s ease-in-out 1 forwards;
+}
+
+.slider .list .item.active .year {
+    animation-delay: 1s;
+}
+
+.slider .list .item.active .genre {
+    animation-delay: 1.2s;
+}
+
+.slider .list .item.active .des {
+    animation-delay: 1.4s;
+}
+
+.slider .list .item.active .button {
+    animation-delay: 1.6s;
+}
+
+
+.arrows {
+    position: absolute;
+    left: 14vw;
+
+    z-index: 100;
+    width: 72vw;
+    top: 30vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrows button {
+    background-color: #09214F;
+    border: none;
+    font-family: monospace;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: x-large;
+    color: white;
+    transition: 0.5s;
+}
+
+.arrows button:hover {
+    background: gray;
+    color: black;
+    cursor: pointer;
+}
+
+.number-button {
+    display: flex;
+    position: absolute;
+    z-index: 100;
+    left: 40vw;
+    top: 65vh;
+    color: white;
+    width: 15vw;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number-button .num {
+    background-color: white;
+    font-family: poppins;
+    width: 22px;
+    color: black;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2em;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+}
+
+.number-button .num.active {
+    transform: scale(1.5);
+}
+
+
+/*Trending CSS*/
+.trending {
+    position: relative;
+    margin-top: 90vh;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #F0F8FF;
+    flex-basis: 20%;
+    border-radius: 20px;
+
+
+
+}
+
+.trending h2 {
+    padding: 50px;
+    font-size: 2em;
+    font-family: monospace;
+    color: #09214F;
+}
+
+.trending-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.movie {
+    flex-basis: 20%;
+
+    position: relative;
+
+}
+
+.movie img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.movie img:hover {
+
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.movie p {
+    text-align: center;
+}
+
+.movie p:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+
+
+/*most popular CSS*/
+.most-popular {
+    position: relative;
+    margin-top: 10vh;
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #F0F8FF;
+    flex-basis: 20%;
+    border-radius: 20px;
+    margin-bottom: 10vh;
+}
+
+.most-popular h2 {
+    padding: 50px;
+    font-size: 2em;
+    font-family: monospace;
+    color: #09214F;
+}
+
+
+/*footer*/
+.footer {
+    margin-top: 20px;
+    padding: 40px;
+    background-color: #09214F;
+    color: white;
+}
+
+/*Movie Page*/
+.movie-section {
+    margin-top: 45px;
+    margin-left: 20px;
+    margin-right: 20px;
+    flex-basis: 20%;
+    height: 100%;
+
+
+}
+
+.movie-page {
+    position: relative;
+    flex-basis: 20%;
+    height: auto;
+    margin-bottom: 70px;
+
+
+}
+
+.movie-container {
+    display: flex;
+
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 60px;
+
+}
+
+.movie-container .movie img:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.movie-container .movie p:hover {
+    cursor: pointer;
+
+
+}
+
+.movie-search {
+    width: 100%;
+    height: 20vh;
+
+}
+
+.movie-search .search-form {
+    width: 80%;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+}
+
+.search-form input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+
+}
+
+.search-form input:focus {
+    outline: none;
+}
+
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vw;
+    background-color: black;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    opacity: 0.8;
+    display: none;
+}
+
+
+/*sign in box*/
+.signIn {
+    z-index: 200;
+    position: fixed;
+    background: lightsteelblue;
+    top: 20vh;
+    left: 20vw;
+    width: 50vw;
+    height: 60vh;
+    padding: 20px;
+    border-radius: 20px;
+    display: none;
+}
+
+
+
+
+.signIn .cancelbutton {
+    float: right;
+    background: none;
+    color: black;
+    border: none;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+.signIn .signBox .sign-form {
+    margin-top: 50px;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+}
+
+.signIn .signBox .sign-form p {
+    margin-top: 15px;
+}
+
+.signIn .signBox .sign-form form {
+    margin-top: 15px;
+}
+
+.signIn .signBox .sign-form form input {
+    width: 50%;
+    height: 20px;
+    margin: 5px;
+    background: lightgrey;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.signIn .signBox .sign-form form input:focus {
+    outline: none;
+}
+
+.signIn .signBox .sign-form .signin {
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 30%;
+    background-color: #09214F;
+    color: white;
+    border-radius: 5px;
+}
+
+
+@media screen and (max-width:650px) {
+    .nav-bar-toggle {
+        display: block;
+
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .trending h2 {
+        text-align: center;
+    }
+
+    .most-popular h2 {
+        text-align: center;
+    }
+
+    .request {
+        width: 60%;
+    }
+
+    .request h2 {
+        font-size: 25px;
+    }
+
+    .request h4 {
+        font-size: 15px;
+    }
+
+    .request p {
+        font-size: 10px;
+    }
+
+    .btn-section {
+        left: 85%;
+        top: 110px;
+    }
+
+    .btn {
+        padding: 2px;
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+    }
+
+    .popupbox {
+        font-size: 15px;
+        top: 130px;
+        width: 60%;
+        left: 10%;
+        height: 30vh;
+    }
+
+    .popupbox input {
+        width: 80%;
+        padding: 10px;
+        margin: 3px;
+        background-color: transparent;
+        color: #F0F8FF;
+        border-bottom: solid #F0F8FF 2px;
+    }
+
+    .popupbox textarea {
+        width: 90%;
+        padding: 5px;
+
+    }
+
+    .popupbox button {
+        padding: 7px;
+        width: 70px;
+        padding-left: 7px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin: 5px;
+    }
+
+    .signIn {
+        top: 10vh;
+        left: 10vw;
+        width: 70vw;
+        height: 60vh;
+        padding: 20px;
+        border-radius: 20px;
+        display: none;
+    }
+
+    .movie {
+        flex-basis: 100%;
+    }
+
+    .slider .list .item {
+        height: 60vh;
+        width: 90vw;
+        left: 5vw;
+    }
+
+    .title {
+        font-size: 0.6em;
+    }
+
+    .year,
+    .genre,
+    .des {
+        font-size: 0.8em;
+    }
+
+    .slider .list .item .content .button button {
+        font-size: 0.6em;
+        width: 80px;
+
+    }
+
+    .arrows {
+        width: 96vw;
+        left: 0vw;
+        padding: 10px;
+    }
+
+    .number-button {
+        top: 55vh;
+        gap: 3px;
+        width: 30vw;
+        left: 35vw;
+
+    }
+
+    .trending {
+        top: -100px;
+    }
+
+    .most-popular {
+        top: -150px;
+
+    }
+
+
+}

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mstudio</title>
+    <link rel="icon" href="img/logo.png">
+
+    <!--css link-->
+    <link rel="stylesheet" href="style.css">
+
+    <!--Google font - poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!--Font awesome icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!--nav bar-->
+    <nav class="navbar">
+        <h1>Mstudio</h1>
+        <div class="nav-links">
+            <p class="nav-link"><a href="index.html">Home |</a></p>
+            <p class="nav-link"><a href="movies.html">Movies |</a></p>
+
+            <p class="nav-link"><button id="signInBtn">Sign In</button></p>
+        </div>
+        <div class="nav-bar-toggle" onclick="showBar()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <!--side nav bar-->
+    <div class="side-navbar">
+        <p onclick="hideBar()" style="text-align: right;"><i class="fa-solid fa-xmark"></i></p>
+        <div class="side-nav-links">
+            <p class="side-nav-link"><a href="index.html">Home</a></p>
+            <p class="side-nav-link"><a href="movies.html">Movies</a></p>
+
+            <p class="nav-link"><button id="sidesignInBtn">Sign In</button></p>
+        </div>
+    </div>
+
+    <!--Header Section-->
+    <!--Movie Slider-->
+    <div class="slider">
+        <!--slider-list-items-->
+        <div class="list">
+            <div class="item active">
+                <img src="img/image2.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        <h1>Furiosa: A Mad Max Saga</h1>
+                    </div>
+                    <div class="year">
+                        <h3>2024</h3>
+                    </div>
+                    <div class="genre">
+                        <h3>Action/Adventure</h3>
+                    </div>
+                    <div class="des">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis necessitatibus dolorum
+                        nostrum sed, amet quae totam velit fugit veritatis cupiditate hic itaque possimus eaque
+                        obcaecati sapiente est cumque voluptates?
+                    </div>
+                    <div class="button">
+                        <button>Watch Now</button>
+                        <button>Watch Later</button>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="item">
+                <img src="https://wallpapersmug.com/download/1024x768/f24a06/2023-spider-man-across-the-spider-verse-movie.jpg"
+                    alt="">
+                <div class="content">
+                    <div class="title">
+                        <h1>Spider-Man: Across the Spider-Verse
+                        </h1>
+                    </div>
+                    <div class="year">
+                        <h3>2023</h3>
+                    </div>
+                    <div class="genre">
+                        <h3>Family/Action</h3>
+                    </div>
+                    <div class="des">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis necessitatibus dolorum
+                        nostrum sed, amet quae totam velit fugit veritatis cupiditate hic itaque possimus eaque
+                        obcaecati sapiente est cumque voluptates?
+                    </div>
+                    <div class="button">
+                        <button>Watch Now</button>
+                        <button>Watch Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://images.hdqwalls.com/wallpapers/kung-fu-panda-4-movie-poster-zv.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        <h1>Kung Fu Panda 4</h1>
+                    </div>
+                    <div class="year">
+                        <h3>2024</h3>
+                    </div>
+                    <div class="genre">
+                        <h3>Comedy/Adventure</h3>
+                    </div>
+                    <div class="des">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis necessitatibus dolorum
+                        nostrum sed, amet quae totam velit fugit veritatis cupiditate hic itaque possimus eaque
+                        obcaecati sapiente est cumque voluptates?
+                    </div>
+                    <div class="button">
+                        <button>Watch Now</button>
+                        <button>Watch Later</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="https://wallpapers.com/images/hd/dune-2021-main-cast-3jkxttpjkq40s4sp.jpg" alt="">
+                <div class="content">
+                    <div class="title">
+                        <h1>Dune: Part Two</h1>
+                    </div>
+                    <div class="year">
+                        <h3>2024</h3>
+                    </div>
+                    <div class="genre">
+                        <h3>Sci-fi/Adventure</h3>
+                    </div>
+                    <div class="des">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quis necessitatibus dolorum
+                        nostrum sed, amet quae totam velit fugit veritatis cupiditate hic itaque possimus eaque
+                        obcaecati sapiente est cumque voluptates?
+                    </div>
+                    <div class="button">
+                        <button>Watch Now</button>
+                        <button>Watch Later</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--arrows for move slider-->
+        <div class="arrows">
+            <button id="prev">
+                <</button>
+                    <button id="next">></button>
+        </div>
+
+        <!--Number icon for slider-->
+        <div class="number-button">
+            <div class="num active">1</div>
+            <div class="num">2</div>
+            <div class="num">3</div>
+            <div class="num">4</div>
+
+        </div>
+
+
+    </div>
+
+    <!--Trending section-->
+    <div class="trending">
+        <div>
+            <h2>Trending</h2>
+        </div>
+        <div class="trending-container">
+            <div class="movie">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOxDed0d9n6vT_LW6yLgb0t1hNWz7FpA6StkZDudnN5VM8caFGDGGUPXWTs86YQu-dEhI&usqp=CAU"
+                    alt="">
+                <p>Damsel 2024</p>
+
+
+            </div>
+            <div class="movie">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*7r9dywcwU1dSTwCyXd5nZQ.jpeg"
+                    alt="">
+                <p>Lift 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00358212-mgtdktnrns-landscape.jpg"
+                    alt="">
+                <p>The Equalizer 3 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://images4.alphacoders.com/134/1344587.jpeg"
+                    alt="">
+                <p>Rebel Moon — Part One: A Child of Fire 2023</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://media.licdn.com/dms/image/D5612AQEv2uRt-gGgHw/article-cover_image-shrink_600_2000/0/1702477814829?e=2147483647&v=beta&t=0yJS2zYd5EDkfs9q9KC8tO84G_ywXnZr7_MkgFcGXEc"
+                    alt="">
+                <p>Leave the World Behind 2023</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://images.wallpapersden.com/image/download/oppenheimer-2023-movie-poster_bmVpamqUmZqaraWkpJRmbmdlrWZlbWU.jpg"
+                    alt="">
+                <p>oppenheimer 2023</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://sysfilessacbe149174fee.blob.core.windows.net/public-container/clients/worthingtheatres/files/793016fa-5c72-4981-8405-dbab4abc6a87.jpg"
+                    alt="">
+                <p>The Killer 2023</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://static1.squarespace.com/static/5724dcb5f699bb5ad642646d/5724e686b654f975531f955e/65f73d22389daf7bdf35b64d/1710701931417/irish+wish+poster+wide.jpeg?format=1500w"
+                    alt="">
+                <p>Irish Wish 2024</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Most Popular section-->
+    <div class="most-popular">
+        <div>
+            <h2>Most Popular</h2>
+        </div>
+        <div class="trending-container">
+            <div class="movie">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHI0M51LFD1c3uh_C4CnDR8AL2n-0SjMrs3Q&usqp=CAU"
+                    alt="">
+                <p>Godzilla x Kong: The New Empire 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="data:image/jpeg;base64,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"
+                    alt="">
+                <p>Road House 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://w0.peakpx.com/wallpaper/260/778/HD-wallpaper-2021-dune-movie-dune-2021-movies-movies.jpg"
+                    alt="">
+                <p>Dune: Part One 2021</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUX-VOjr2fYcb3dUuqiVObwPOYO_lC1fbLiYczAgzO_4H_XCG1Yxjrr7dttvZwKPqvdtQ&usqp=CAU"
+                    alt="">
+                <p>Poor Things 2023</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://i.ytimg.com/vi/g8zxiB5Qhsc/maxresdefault.jpg" alt="">
+                <p>Monkey Man 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://ghostbustersnews.com/wp-content/uploads/2023/12/ghostbusters_frozen_empire_poster_banner.webp"
+                    alt="">
+                <p>Ghostbusters: Frozen Empire 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXFb7uzRZ27DzdlOkhwUnQFgzcQfAQS4BENo2GwLc4e9rCURy-lYKguE7kfq_XTl1q56s&usqp=CAU" alt="">
+                <p>Civil War 2024</p>
+
+            </div>
+            <div class="movie">
+                <img src="https://www.heavenofhorror.com/wp-content/uploads/2024/01/the-first-omen-2024.jpg" alt="">
+                <p>The First Omen 2024</p>
+
+            </div>
+        </div>
+    </div>
+
+    <!--Overlay-->
+    <div class="overlay"></div>
+    
+    <!--signin-->
+    <div class="signIn">
+        <button class="cancelbutton" id="cancelBtn">X</button>
+        <div class="signBox">
+            <div class="sign-form">
+
+                <h2>Sign In</h2>
+                <p><i class="fa-brands fa-google-plus-g"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i></h4>
+                <p>Or use your email password</p>
+                <form action="">
+                    <input type="email" name="" id="" placeholder="Email">
+                    <input type="password" placeholder="password">
+                </form>
+                <p>Forgot Your password?</p>
+                <button class="signin">Sign In</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <div class="footer-container ">
+            <div class="footer-box-1">
+                <h2 class="headingText">Mstudio</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                <div class="footer-icon-container">
+                    <i class="fa-brands fa-instagram" style="color: white;"></i>
+                    <i class="fa-brands fa-twitter" style="color: white;"></i>
+                    <i class="fa-brands fa-facebook" style="color: white;"></i>
+                </div>
+            </div>
+        </div>
+        <p>@ 2024 Mstudio.com</p>
+    </div>
+
+
+
+    <!--java script link-->
+    <script src="main.js"></script>
+    <script src="signin.js"></script>
+</body>
+
+</html>
